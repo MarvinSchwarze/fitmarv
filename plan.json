@@ -17,7 +17,9 @@
                 "options": [
                   { "id": "joggen", "label": "Joggen" },
                   { "id": "radfahren", "label": "Radfahren" },
-                  { "id": "boxen", "label": "Boxen" }
+                  { "id": "boxen", "label": "Boxen" },
+                  { "id": "seilspringen", "label": "Seilspringen" },
+                  { "id": "gehen", "label": "Gehen (x2 Zeit)" }
                 ]
               },
               "track": { "duration_min": true }
@@ -176,7 +178,9 @@
                 "options": [
                   { "id": "joggen", "label": "Joggen" },
                   { "id": "radfahren", "label": "Radfahren" },
-                  { "id": "boxen", "label": "Boxen" }
+                  { "id": "boxen", "label": "Boxen" },
+                  { "id": "seilspringen", "label": "Seilspringen" },
+                  { "id": "gehen", "label": "Gehen (x2 Zeit)" }
                 ]
               },
               "track": { "duration_min": true }
@@ -325,7 +329,9 @@
                 "options": [
                   { "id": "joggen", "label": "Joggen" },
                   { "id": "radfahren", "label": "Radfahren" },
-                  { "id": "boxen", "label": "Boxen" }
+                  { "id": "boxen", "label": "Boxen" },
+                  { "id": "seilspringen", "label": "Seilspringen" },
+                  { "id": "gehen", "label": "Gehen (x2 Zeit)" }
                 ]
               },
               "track": { "duration_min": true }
