@@ -1,0 +1,518 @@
+{
+  "week_plan": {
+    "monday": {
+      "sections": [
+        {
+          "id": "cardio_short",
+          "name": "Cardio Short",
+          "type": "cardio",
+          "exercises": [
+            {
+              "name": "Cardio Short",
+              "sets": 1,
+              "target": "Min 20 min",
+              "choice": {
+                "label": "Cardio Art",
+                "default": "joggen",
+                "options": [
+                  { "id": "joggen", "label": "Joggen" },
+                  { "id": "radfahren", "label": "Radfahren" },
+                  { "id": "boxen", "label": "Boxen" }
+                ]
+              },
+              "track": { "duration_min": true }
+            }
+          ]
+        },
+        {
+          "id": "calisthenics_ruecken_arme",
+          "name": "Calisthenics Ruecken & Arme",
+          "type": "strength",
+          "mode_selector": {
+            "id": "equipment_upper",
+            "label": "Equipment vorhanden (Dipstange, Klimmzugstange)?",
+            "default": "ja",
+            "options": [
+              { "id": "ja", "label": "Ja" },
+              { "id": "nein", "label": "Nein" }
+            ]
+          },
+          "exercises_by_mode": {
+            "ja": [
+              {
+                "name": "Klimmzug Obergriff",
+                "variants": [
+                  { "id": "weight", "label": "Klimmzug Obergriff 2x10 (Gewicht)", "sets": 2, "target": "10", "track": { "weight": true } },
+                  { "id": "max", "label": "Klimmzug Obergriff 3xMax", "sets": 3, "target": "Max", "track": { "reps": true } }
+                ]
+              },
+              {
+                "name": "Klimmzug Untergriff",
+                "variants": [
+                  { "id": "weight", "label": "Klimmzug Untergriff 2x10 (Gewicht)", "sets": 2, "target": "10", "track": { "weight": true } },
+                  { "id": "max", "label": "Klimmzug Untergriff 3xMax", "sets": 3, "target": "Max", "track": { "reps": true } }
+                ]
+              },
+              { "name": "Dipstange", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Pike Pushup", "sets": 3, "target": "Max", "track": { "reps": true } }
+            ],
+            "nein": [
+              { "name": "Pike Pushup", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Negative Liegestuetze", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } }
+            ]
+          }
+        },
+        {
+          "id": "bauch_mon",
+          "name": "Bauch",
+          "type": "strength",
+          "exercises": [
+            { "name": "Situps", 
+            "sets": 3, 
+            "target": "Max", 
+            "choice": {
+              "label": "Zusatzgewicht",
+              "default": "ohne",
+              "options": [
+                { "id": "ohne", "label": "Ohne Gewicht" },
+                { "id": "5kg", "label": "5kg" },
+                { "id": "10kg", "label": "10kg" },
+                { "id": "15kg", "label": "15kg" }
+              ]
+            },
+            "track": { "reps": true } },
+            {
+              "name": "Russian Twists",
+              "sets": 3,
+              "target": "Max",
+              "choice": {
+                "label": "Zusatzgewicht",
+                "default": "ohne",
+                "options": [
+                  { "id": "ohne", "label": "Ohne Gewicht" },
+                  { "id": "5kg", "label": "5kg" },
+                  { "id": "10kg", "label": "10kg" },
+                  { "id": "15kg", "label": "15kg" }
+                ]
+              },
+              "track": { "reps": true }
+            }
+          ]
+        }
+      ]
+    },
+    "tuesday": {
+      "sections": [
+        {
+          "id": "dehnen_1_tue",
+          "name": "Dehnen 1",
+          "type": "stretch",
+          "exercises": [
+            { "name": "Knie", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Becken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Fuesse", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Ruecken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Arme", "sets": 3, "target": "20 Sekunden" }
+          ]
+        },
+        {
+          "id": "dehnen_2_tue",
+          "name": "Dehnen 2",
+          "type": "stretch",
+          "exercises": [
+            { "name": "Knie", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Becken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Fuesse", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Ruecken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Arme", "sets": 3, "target": "20 Sekunden" }
+          ]
+        },
+        {
+          "id": "core_tue",
+          "name": "Core",
+          "type": "strength",
+          "mode_selector": {
+            "id": "equipment_dumbbells",
+            "label": "Kurzhanteln vorhanden?",
+            "default": "ja",
+            "options": [
+              { "id": "ja", "label": "Ja" },
+              { "id": "nein", "label": "Nein" }
+            ]
+          },
+          "exercises_by_mode": {
+            "ja": [
+              { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Kurzhantel Kreuzheben gestreckt", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Boot", "sets": 6, "target": "Max", "track": { "reps": true } }
+            ],
+            "nein": [
+              { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Supermann", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Boot", "sets": 6, "target": "Max", "track": { "reps": true } }
+            ]
+          }
+        }
+      ]
+    },
+    "wednesday": {
+      "sections": [
+        {
+          "id": "cardio_short_wed",
+          "name": "Cardio Short",
+          "type": "cardio",
+          "exercises": [
+            {
+              "name": "Cardio Short",
+              "sets": 1,
+              "target": "Min 20 min",
+              "choice": {
+                "label": "Cardio Art",
+                "default": "joggen",
+                "options": [
+                  { "id": "joggen", "label": "Joggen" },
+                  { "id": "radfahren", "label": "Radfahren" },
+                  { "id": "boxen", "label": "Boxen" }
+                ]
+              },
+              "track": { "duration_min": true }
+            }
+          ]
+        },
+        {
+          "id": "armes_haende_1",
+          "name": "Widerstandstraining Arme & Haende 1",
+          "type": "strength",
+          "mode_selector": {
+            "id": "equipment_arms",
+            "label": "Geraete vorhanden?",
+            "default": "ja",
+            "options": [
+              { "id": "ja", "label": "Ja" },
+              { "id": "nein", "label": "Nein" }
+            ]
+          },
+          "exercises_by_mode": {
+            "ja": [
+              { "name": "Hammercurls", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Obergriff gewinkelt", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Bouldergriff heben", "sets": 3, "target": "15", "track": { "weight": true } },
+              { "name": "Handgelenk heben vorne", "sets": 3, "target": "20", "track": { "weight": true } },
+              { "name": "Handgelenk heben hinten", "sets": 3, "target": "20", "track": { "weight": true } },
+              { "name": "Bankdruecken", "sets": 3, "target": "12", "track": { "weight": true } }
+            ],
+            "nein": [
+              { "name": "Pike Pushup", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Negative Liegestuetze", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } }
+            ]
+          }
+        },
+        {
+          "id": "armes_haende_2",
+          "name": "Widerstandstraining Arme & Haende 2",
+          "type": "strength",
+          "mode_selector": {
+            "id": "equipment_arms_2",
+            "label": "Geraete vorhanden?",
+            "default": "ja",
+            "options": [
+              { "id": "ja", "label": "Ja" },
+              { "id": "nein", "label": "Nein" }
+            ]
+          },
+          "exercises_by_mode": {
+            "ja": [
+              { "name": "Hammercurls", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Obergriff gewinkelt", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Bouldergriff heben", "sets": 3, "target": "15", "track": { "weight": true } },
+              { "name": "Handgelenk heben vorne", "sets": 3, "target": "20", "track": { "weight": true } },
+              { "name": "Handgelenk heben hinten", "sets": 3, "target": "20", "track": { "weight": true } },
+              { "name": "Bankdruecken", "sets": 3, "target": "12", "track": { "weight": true } }
+            ],
+            "nein": [
+              { "name": "Pike Pushup", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Negative Liegestuetze", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } }
+            ]
+          }
+        },
+        {
+          "id": "bauch_wed",
+          "name": "Bauch",
+          "type": "strength",
+          "exercises": [
+            { "name": "Situps", "sets": 3, "target": "Max", "track": { "reps": true } },
+            {
+              "name": "Russian Twists",
+              "sets": 3,
+              "target": "Max",
+              "choice": {
+                "label": "Zusatzgewicht",
+                "default": "ohne",
+                "options": [
+                  { "id": "ohne", "label": "Ohne Gewicht" },
+                  { "id": "5kg", "label": "5kg" },
+                  { "id": "10kg", "label": "10kg" },
+                  { "id": "15kg", "label": "15kg" }
+                ]
+              },
+              "track": { "reps": true }
+            }
+          ]
+        }
+      ]
+    },
+    "thursday": {
+      "sections": [
+        {
+          "id": "dehnen_1_thu",
+          "name": "Dehnen 1",
+          "type": "stretch",
+          "exercises": [
+            { "name": "Knie", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Becken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Fuesse", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Ruecken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Arme", "sets": 3, "target": "20 Sekunden" }
+          ]
+        },
+        {
+          "id": "dehnen_2_thu",
+          "name": "Dehnen 2",
+          "type": "stretch",
+          "exercises": [
+            { "name": "Knie", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Becken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Fuesse", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Ruecken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Arme", "sets": 3, "target": "20 Sekunden" }
+          ]
+        },
+        {
+          "id": "stabilisation",
+          "name": "Stabilisation",
+          "type": "strength",
+          "exercises": [
+            { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+            { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } },
+            { "name": "Assisted Pistol Squats", "sets": "MAX", "target": "20", "description": "So tief wie moeglich.", "track": { "reps": true } },
+            { "name": "Hocke", "sets": "MAX", "target": "1 min", "track": { "duration_min": true } }
+          ]
+        }
+      ]
+    },
+    "friday": {
+      "sections": [
+        {
+          "id": "cardio_long",
+          "name": "Cardio Long",
+          "type": "cardio",
+          "exercises": [
+            {
+              "name": "Cardio Long",
+              "sets": 1,
+              "target": "Min 40 min",
+              "choice": {
+                "label": "Cardio Art",
+                "default": "joggen",
+                "options": [
+                  { "id": "joggen", "label": "Joggen" },
+                  { "id": "radfahren", "label": "Radfahren" },
+                  { "id": "boxen", "label": "Boxen" }
+                ]
+              },
+              "track": { "duration_min": true }
+            }
+          ]
+        },
+        {
+          "id": "calisthenics_ruecken_arme_fr",
+          "name": "Calisthenics Ruecken & Arme",
+          "type": "strength",
+          "mode_selector": {
+            "id": "equipment_upper",
+            "label": "Equipment vorhanden (Dipstange, Klimmzugstange)?",
+            "default": "ja",
+            "options": [
+              { "id": "ja", "label": "Ja" },
+              { "id": "nein", "label": "Nein" }
+            ]
+          },
+          "exercises_by_mode": {
+            "ja": [
+              {
+                "name": "Klimmzug Obergriff",
+                "variants": [
+                  { "id": "weight", "label": "Klimmzug Obergriff 2x10 (Gewicht)", "sets": 2, "target": "10", "track": { "weight": true } },
+                  { "id": "max", "label": "Klimmzug Obergriff 3xMax", "sets": 3, "target": "Max", "track": { "reps": true } }
+                ]
+              },
+              {
+                "name": "Klimmzug Untergriff",
+                "variants": [
+                  { "id": "weight", "label": "Klimmzug Untergriff 2x10 (Gewicht)", "sets": 2, "target": "10", "track": { "weight": true } },
+                  { "id": "max", "label": "Klimmzug Untergriff 3xMax", "sets": 3, "target": "Max", "track": { "reps": true } }
+                ]
+              },
+              { "name": "Dipstange", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Pike Pushup", "sets": 3, "target": "Max", "track": { "reps": true } }
+            ],
+            "nein": [
+              { "name": "Pike Pushup", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Negative Liegestuetze", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } }
+            ]
+          }
+        },
+        {
+          "id": "bauch_fri",
+          "name": "Bauch",
+          "type": "strength",
+          "exercises": [
+            { "name": "Situps", "sets": 3, "target": "Max", "track": { "reps": true } },
+            {
+              "name": "Russian Twists",
+              "sets": 3,
+              "target": "Max",
+              "choice": {
+                "label": "Zusatzgewicht",
+                "default": "ohne",
+                "options": [
+                  { "id": "ohne", "label": "Ohne Gewicht" },
+                  { "id": "5kg", "label": "5kg" },
+                  { "id": "10kg", "label": "10kg" },
+                  { "id": "15kg", "label": "15kg" }
+                ]
+              },
+              "track": { "reps": true }
+            }
+          ]
+        }
+      ]
+    },
+    "saturday": {
+      "sections": [
+        {
+          "id": "dehnen_1_sat",
+          "name": "Dehnen 1",
+          "type": "stretch",
+          "exercises": [
+            { "name": "Knie", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Becken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Fuesse", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Ruecken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Arme", "sets": 3, "target": "20 Sekunden" }
+          ]
+        },
+        {
+          "id": "dehnen_2_sat",
+          "name": "Dehnen 2",
+          "type": "stretch",
+          "exercises": [
+            { "name": "Knie", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Becken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Fuesse", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Ruecken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Arme", "sets": 3, "target": "20 Sekunden" }
+          ]
+        },
+        {
+          "id": "armes_haende_sat_1",
+          "name": "Widerstandstraining Arme & Haende 1",
+          "type": "strength",
+          "mode_selector": {
+            "id": "equipment_arms_sat",
+            "label": "Geraete vorhanden?",
+            "default": "ja",
+            "options": [
+              { "id": "ja", "label": "Ja" },
+              { "id": "nein", "label": "Nein" }
+            ]
+          },
+          "exercises_by_mode": {
+            "ja": [
+              { "name": "Hammercurls", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Obergriff gewinkelt", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Bouldergriff heben", "sets": 3, "target": "15", "track": { "weight": true } },
+              { "name": "Handgelenk heben vorne", "sets": 3, "target": "20", "track": { "weight": true } },
+              { "name": "Handgelenk heben hinten", "sets": 3, "target": "20", "track": { "weight": true } },
+              { "name": "Bankdruecken", "sets": 3, "target": "12", "track": { "weight": true } }
+            ],
+            "nein": [
+              { "name": "Pike Pushup", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Negative Liegestuetze", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } }
+            ]
+          }
+        },
+        {
+          "id": "armes_haende_sat_2",
+          "name": "Widerstandstraining Arme & Haende 2",
+          "type": "strength",
+          "mode_selector": {
+            "id": "equipment_arms_sat_2",
+            "label": "Geraete vorhanden?",
+            "default": "ja",
+            "options": [
+              { "id": "ja", "label": "Ja" },
+              { "id": "nein", "label": "Nein" }
+            ]
+          },
+          "exercises_by_mode": {
+            "ja": [
+              { "name": "Hammercurls", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Obergriff gewinkelt", "sets": 3, "target": "10", "track": { "weight": true } },
+              { "name": "Bouldergriff heben", "sets": 3, "target": "15", "track": { "weight": true } },
+              { "name": "Handgelenk heben vorne", "sets": 3, "target": "20", "track": { "weight": true } },
+              { "name": "Handgelenk heben hinten", "sets": 3, "target": "20", "track": { "weight": true } },
+              { "name": "Bankdruecken", "sets": 3, "target": "12", "track": { "weight": true } }
+            ],
+            "nein": [
+              { "name": "Pike Pushup", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Negative Liegestuetze", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Plank", "sets": 3, "target": "Max", "track": { "reps": true } },
+              { "name": "Sideplank", "sets": 3, "target": "Max", "track": { "reps": true } }
+            ]
+          }
+        }
+      ]
+    },
+    "sunday": {
+      "sections": [
+        {
+          "id": "dehnen_1_sun",
+          "name": "Dehnen 1",
+          "type": "stretch",
+          "exercises": [
+            { "name": "Knie", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Becken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Fuesse", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Ruecken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Arme", "sets": 3, "target": "20 Sekunden" }
+          ]
+        },
+        {
+          "id": "dehnen_2_sun",
+          "name": "Dehnen 2",
+          "type": "stretch",
+          "exercises": [
+            { "name": "Knie", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Becken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Fuesse", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Ruecken", "sets": 3, "target": "20 Sekunden" },
+            { "name": "Arme", "sets": 3, "target": "20 Sekunden" }
+          ]
+        }
+      ]
+    }
+  }
+}
